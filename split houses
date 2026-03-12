@@ -1,0 +1,22 @@
+class TestClass {
+    public static void main(String args[])
+    {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s = sc.next();
+
+        StringBuilder result = new StringBuilder();
+
+        for(int i = 0; i < n; i++){
+            if(s.charAt(i) == '.')
+                result.append('B');
+            else
+                result.append('H');
+        }
+
+        System.out.println("YES");
+        System.out.println(result.toString());
+    }
+}
+    
