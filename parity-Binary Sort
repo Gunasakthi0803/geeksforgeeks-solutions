@@ -1,0 +1,38 @@
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        
+        while(t-- > 0){
+            
+            int n = sc.nextInt();
+            Integer arr[] = new Integer[n];
+            
+            for(int i=0;i<n;i++){
+                arr[i] = sc.nextInt();
+            }
+            
+            Arrays.sort(arr,(a,b)->{
+                
+                int setA = Integer.bitCount(a);
+                int setB = Integer.bitCount(b);
+                
+                if(setA % 2 == 0 && setB % 2 != 0)
+                    return -1;
+                
+                if(setA % 2 != 0 && setB % 2 == 0)
+                    return 1;
+                
+                return a - b;
+            });
+            
+            for(int x : arr){
+                System.out.print(x + " ");
+            }
+            
+            System.out.println();
+            }
+         }
+         }   
+  
+    
